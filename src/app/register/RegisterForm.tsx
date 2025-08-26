@@ -6,10 +6,8 @@ import * as z from "zod";
 export default function RegisterPage() {
   return (
     <div className="min-h-screen flex justify-center bg-white">
-      <div className="relative w-[1400px] min-h-screen flex flex-col items-center">
-        <div className="absolute top-6 left-6">
-          <img src="/logo.webp" alt="ChangeIt4Me" className="h-10" />
-        </div>
+      <div className="relative w-[1200px] min-h-screen flex flex-col items-center">
+        
         <AuthForm
           title="Create Your Account"
           subtitle="Join the community and start swapping today!"
