@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.15)] w-[1300px] rounded-[19px] pt-[40px] pb-[20px] pl-[30px] pr-[30px]">
+    <footer className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.15)] w-[1300px] rounded-[19px] pt-[40px] pb-[20px] pl-[30px] pr-[30px] mx-auto mb-[30px]">
       <div className="max-w-[1300px] mx-auto px-4">
         {/* Основной контент футера */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:[grid-template-columns:1.8fr_0.8fr_0.7fr_0.8fr_1.3fr] gap-8 mb-12">
