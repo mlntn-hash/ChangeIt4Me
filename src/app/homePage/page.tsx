@@ -3,7 +3,8 @@ import Header from "../header/header";
 import Footer from "../footer/footer";
 import Image from "next/image";
 import Link from "next/link";
-import { Car, Home, ShoppingCart } from "lucide-react";
+import PopularOffers from "./twoBlock";
+import HowItWorks from "./sectionOne";
 
 export default function homePage() {
   return (
@@ -62,11 +63,9 @@ export default function homePage() {
     </div>
     </div>
 
-
-
 {/* Основной блок */}
 <div className="w-full bg-[#F8FAF7]">
-  <div className="flex w-[1300px] mx-auto pt-[50px] gap-10">
+  <div className="flex w-[1300px] mx-auto pt-[50px] pb-[100px] gap-10">
     
     {/* Левая колонка */}
 <div className="flex flex-col gap-6 w-[604px]">
@@ -108,7 +107,7 @@ export default function homePage() {
         <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
           Exchange your home, apartment, or land directly and easily.
         </p>
-        <Link href="#" className="text-[16px] font-light text-[#181818] ml-[10px]">
+        <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px]">
           See items →
         </Link>
         <div className="absolute bottom-[-30px] right-[-30px]">
@@ -137,7 +136,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Swap your vehicle for another — no cash needed.
           </p>
-          <Link href="#" className="text-[16px] font-light text-[#181818] ml-[10px]">
+          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px]">
             See items →
           </Link>
          <div className="absolute bottom-[-30px] right-[-30px]">
@@ -162,7 +161,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Trade electronics, furniture, clothes, and more — item for item.
           </p>
-          <Link href="#" className="text-[16px] font-light text-[#181818] ml-[10px]">
+          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px]">
             See items →
           </Link>
           <div className="absolute bottom-[-30px] right-[-30px]">
@@ -174,21 +173,14 @@ export default function homePage() {
         </div>
         </div>
       </div>
-
-      {/* Cars + Marketplace снизу (под Real Estate) */}
-      <div className="flex gap-6">
-        <div className="bg-transparent h-[320px] w-[327px]" />
-        <div className="bg-transparent h-[320px] w-[327px]" />
-      </div>
     </div>
   </div>
 
 
         
-
-       
-     
-        </div>
+</div>
+       <PopularOffers/>
+        <HowItWorks/>
           <Footer />
          </div>
        
