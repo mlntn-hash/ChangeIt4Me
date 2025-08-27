@@ -51,7 +51,7 @@ export default function AuthForm({
   } = useForm({ resolver: zodResolver(schema) });
 
   return (
-    <div className="mt-25 w-[837px]  h-auto  rounded-2xl bg-[#F1F3EB] pb-10 pt-15 shadow-lg">
+    <div className="mt-30 w-[837px]  h-auto  rounded-2xl bg-[#F1F3EB] pb-10 pt-15 shadow-lg">
       <h2 className="text-center font-normal text-[38px] text-[#181818]">
         {title}
       </h2>

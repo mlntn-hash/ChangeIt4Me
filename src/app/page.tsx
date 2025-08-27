@@ -1,5 +1,5 @@
-import RegisterPage from "./register/page";
+import Page from "./homePage/page";
 
 export default function Home() {
-  return <RegisterPage />;
+  return <Page />;
 }
