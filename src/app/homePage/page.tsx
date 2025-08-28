@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PopularOffers from "./twoBlock";
 import HowItWorks from "./sectionOne";
+import Newsletter from "./email";
 
 export default function homePage() {
   return (
@@ -21,7 +22,7 @@ export default function homePage() {
         <Link 
           href="/cars" 
           className="flex items-center gap-2 px-4 py-2 rounded-[10px] text-[#181818] text-[20px] 
-                     hover:bg-white transition h-[50px] hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
+                     hover:bg-white transition-colors duration-500 ease-in-out h-[50px] hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
         >
           <img
             src="/Group 12 (2).svg"
@@ -35,7 +36,7 @@ export default function homePage() {
         <Link 
           href="/real-estate" 
           className="flex items-center gap-2 px-4 py-2 rounded-[10px] text-[#181818] text-[20px] 
-                     hover:bg-white h-[50px] transition hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
+                     hover:bg-white h-[50px] transition-colors duration-500 ease-in-out hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
         >
           <img
             src="/Group 12 (1).svg"
@@ -49,7 +50,7 @@ export default function homePage() {
         <Link 
           href="/marketplace" 
           className="flex items-center gap-2 px-4 py-2 rounded-[10px] text-[#181818] text-[20px] 
-                     hover:bg-white h-[50px] transition hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
+                     hover:bg-white h-[50px] transition-colors duration-500 ease-in-out hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
         >
           <img
             src="/Group 12.svg"
@@ -65,7 +66,7 @@ export default function homePage() {
 
 {/* Основной блок */}
 <div className="w-full bg-[#F8FAF7]">
-  <div className="flex w-[1300px] mx-auto pt-[50px] pb-[100px] gap-10">
+  <div className="flex w-[1300px] mx-auto pt-[50px] pb-[60px] gap-10">
     
     {/* Левая колонка */}
 <div className="flex flex-col gap-6 w-[604px]">
@@ -86,7 +87,7 @@ export default function homePage() {
         <p className="font-regular text-[24px] text-[#181818] mb-6">
           Cars, real estate & goods key-for-key.
         </p>
-        <button className="bg-[#376039] text-[17px] font-regular text-white px-6 py-3 rounded-[8px] w-[196px] h-[50px] hover:bg-[#2d4e30]">
+        <button className="bg-[#376039] text-[17px] font-regular text-white px-6 py-3 rounded-[8px] w-[196px] h-[50px] hover:bg-[#2d4e30] transition-colors duration-500 ease-in-out">
           Post Your Offer
         </button>
       </div>
@@ -107,7 +108,7 @@ export default function homePage() {
         <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
           Exchange your home, apartment, or land directly and easily.
         </p>
-        <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px]">
+        <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
           See items →
         </Link>
         <div className="absolute bottom-[-30px] right-[-30px]">
@@ -136,7 +137,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Swap your vehicle for another — no cash needed.
           </p>
-          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px]">
+          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
             See items →
           </Link>
          <div className="absolute bottom-[-30px] right-[-30px]">
@@ -161,7 +162,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Trade electronics, furniture, clothes, and more — item for item.
           </p>
-          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px]">
+          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
             See items →
           </Link>
           <div className="absolute bottom-[-30px] right-[-30px]">
@@ -181,6 +182,7 @@ export default function homePage() {
 </div>
        <PopularOffers/>
         <HowItWorks/>
+        <Newsletter/>
           <Footer />
          </div>
        
