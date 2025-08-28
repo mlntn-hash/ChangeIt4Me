@@ -36,7 +36,7 @@ const Header = () => {
 
           {/* --- Кнопка "Подать объявление" --- */}
           <button className="bg-[#376039] h-[41px] w-[161px] hover:bg-[#2d4e30] 
-                             text-white rounded-lg text-[17px] font-medium transition-colors">
+                             text-white rounded-lg text-[17px] font-medium transition-colors duration-500 ease-in-out">
             Post an Ad
           </button>
 

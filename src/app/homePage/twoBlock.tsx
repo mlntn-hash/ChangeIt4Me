@@ -11,11 +11,11 @@ export default function PopularOffers() {
   ];
 
   return (
-    <section className="max-w-[1300px] py-[100px] bg-white mx-auto ">
+    <section className="max-w-[1300px] py-[50px] bg-white mx-auto ">
       {/* Заголовок + кнопка */}
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-[38px] font-regular text-[#181818]">Popular Offers</h2>
-        <button className="bg-[#376039] text-white text-[17px] font-regular rounded-[6px] hover:bg-[#2d4e30] w-[166px] h-[40px]">
+        <button className="bg-[#376039] text-white text-[17px] font-regular rounded-[6px] hover:bg-[#2d4e30] w-[166px] h-[40px] transition-colors duration-500 ease-in-out">
           See all items →
         </button>
       </div>
@@ -43,7 +43,7 @@ export default function PopularOffers() {
               <p className="text-[16px] mb-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <a href="#" className="flex text-[16px] items-center gap-2 text-sm font-thin">
+              <a href="#" className="flex text-[16px] items-center gap-2 text-sm font-thin transform hover:scale-101 duration-300 ease-in-out">
                 Learn more →
               </a>
             </div>
