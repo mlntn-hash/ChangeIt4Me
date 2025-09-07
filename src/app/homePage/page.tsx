@@ -64,7 +64,7 @@ export default function homePage() {
         <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
           Exchange your home, apartment, or land directly and easily.
         </p>
-        <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
+        <Link href="/real-estate" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
           See items →
         </Link>
         <div className="absolute bottom-[-30px] right-[-30px]">
@@ -93,7 +93,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Swap your vehicle for another — no cash needed.
           </p>
-          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
+          <Link href="/cars" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
             See items →
           </Link>
          <div className="absolute bottom-[-30px] right-[-30px]">
@@ -118,7 +118,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Trade electronics, furniture, clothes, and more — item for item.
           </p>
-          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
+          <Link href="/marketplace" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
             See items →
           </Link>
           <div className="absolute bottom-[-30px] right-[-30px]">
