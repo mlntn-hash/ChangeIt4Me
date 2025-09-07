@@ -6,6 +6,7 @@ import Link from "next/link";
 import PopularOffers from "./twoBlock";
 import HowItWorks from "./sectionOne";
 import Newsletter from "./email";
+import Category from "./category";
 
 export default function homePage() {
   return (
@@ -14,54 +15,9 @@ export default function homePage() {
     
       <div className="relative  flex flex-col  ">
            <Header />
+           <Category />
              
- <div className="w-full bg-[#EDEEE6]">
-      <div className="flex justify-end items-center gap-6 h-[76px] max-w-[1300px] mx-auto">
 
-        {/* Cars */}
-        <Link 
-          href="/cars" 
-          className="flex items-center gap-2 px-4 py-2 rounded-[10px] text-[#181818] text-[20px] 
-                     hover:bg-white transition-colors duration-500 ease-in-out h-[50px] hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
-        >
-          <img
-            src="/Group 12 (2).svg"
-            alt="Cars Icon"
-            className="w-[40px] h-[40px]"
-          />
-          <span>Cars (998 items)</span>
-        </Link>
-
-        {/* Real Estate */}
-        <Link 
-          href="/real-estate" 
-          className="flex items-center gap-2 px-4 py-2 rounded-[10px] text-[#181818] text-[20px] 
-                     hover:bg-white h-[50px] transition-colors duration-500 ease-in-out hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
-        >
-          <img
-            src="/Group 12 (1).svg"
-            alt="Real Estate Icon"
-            className="w-[40px] h-[40px]"
-          />
-          <span>Real Estate (990 items)</span>
-        </Link>
-
-        {/* Marketplace */}
-        <Link 
-          href="/marketplace" 
-          className="flex items-center gap-2 px-4 py-2 rounded-[10px] text-[#181818] text-[20px] 
-                     hover:bg-white h-[50px] transition-colors duration-500 ease-in-out hover:shadow-[0_0_10px_rgba(0,0,0,0.15)]"
-        >
-          <img
-            src="/Group 12.svg"
-            alt="Marketplace Icon"
-            className="w-[40px] h-[40px]"
-          />
-          <span>Marketplace (1220 items)</span>
-        </Link>
-
-      </div>
-    </div>
     </div>
 
 {/* Основной блок */}
@@ -108,7 +64,7 @@ export default function homePage() {
         <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
           Exchange your home, apartment, or land directly and easily.
         </p>
-        <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
+        <Link href="/real-estate" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
           See items →
         </Link>
         <div className="absolute bottom-[-30px] right-[-30px]">
@@ -137,7 +93,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Swap your vehicle for another — no cash needed.
           </p>
-          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
+          <Link href="/cars" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
             See items →
           </Link>
          <div className="absolute bottom-[-30px] right-[-30px]">
@@ -162,7 +118,7 @@ export default function homePage() {
           <p className="text-[17px] font-regular text-[#181818] mb-4 ml-[10px]">
             Trade electronics, furniture, clothes, and more — item for item.
           </p>
-          <Link href="#" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
+          <Link href="/marketplace" className="text-[16px] font-regular text-[#181818] ml-[10px] transform hover:scale-101 duration-300 ease-in-out">
             See items →
           </Link>
           <div className="absolute bottom-[-30px] right-[-30px]">
