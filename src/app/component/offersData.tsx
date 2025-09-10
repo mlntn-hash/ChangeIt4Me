@@ -47,7 +47,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda1.jpg",
   },
   {
-    id: 1,
+    id: 4,
     title: "Volkswagen 2019",
     category: "Cars",
     location: "Texas",
@@ -58,7 +58,7 @@ const mockOffers: Offer[] = [
     image: "/cars/vw.jpg",
   },
   {
-    id: 2,
+    id: 5,
     title: "Mazda 2020",
     category: "Cars",
     location: "California",
@@ -69,7 +69,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda2.jpg",
   },
   {
-    id: 3,
+    id: 6,
     title: "Mazda 2019",
     category: "Cars",
     location: "Florida",
@@ -80,7 +80,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda1.jpg",
   },
   {
-    id: 1,
+    id: 7,
     title: "Volkswagen 2019",
     category: "Cars",
     location: "Texas",
@@ -91,7 +91,7 @@ const mockOffers: Offer[] = [
     image: "/cars/vw.jpg",
   },
   {
-    id: 2,
+    id: 8,
     title: "Mazda 2020",
     category: "Cars",
     location: "California",
@@ -102,7 +102,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda2.jpg",
   },
   {
-    id: 3,
+    id: 9,
     title: "Mazda 2019",
     category: "Cars",
     location: "Florida",
@@ -113,7 +113,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda1.jpg",
   },
   {
-    id: 1,
+    id: 10,
     title: "Volkswagen 2019",
     category: "Cars",
     location: "Texas",
@@ -124,7 +124,7 @@ const mockOffers: Offer[] = [
     image: "/cars/vw.jpg",
   },
   {
-    id: 2,
+    id: 11,
     title: "Mazda 2020",
     category: "Cars",
     location: "California",
@@ -135,7 +135,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda2.jpg",
   },
   {
-    id: 3,
+    id: 12,
     title: "Mazda 2019",
     category: "Cars",
     location: "Florida",
@@ -146,7 +146,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda1.jpg",
   },
   {
-    id: 1,
+    id: 13,
     title: "Volkswagen 2019",
     category: "Cars",
     location: "Texas",
@@ -157,7 +157,7 @@ const mockOffers: Offer[] = [
     image: "/cars/vw.jpg",
   },
   {
-    id: 2,
+    id: 14,
     title: "Mazda 2020",
     category: "Cars",
     location: "California",
@@ -168,7 +168,7 @@ const mockOffers: Offer[] = [
     image: "/cars/mazda2.jpg",
   },
   {
-    id: 3,
+    id: 15,
     title: "Mazda 2019",
     category: "Cars",
     location: "Florida",
