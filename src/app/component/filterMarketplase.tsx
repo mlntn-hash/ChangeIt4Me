@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { fetchOffers, Offer } from "./offersData";
+import { fetchOffers, Offer } from "./offerMarketplace";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,32 +11,26 @@ export default function OffersWithFilters() {
   const [loading, setLoading] = useState(true);
 
   const [filters, setFilters] = useState({
+    categoryProd: [] as string[],
     location: [] as string[],
-    make: [] as string[],
-    year: [] as string[],
-    transmission: [] as string[],
-    condition: [] as string[],
+    brand: [] as string[],
     exchangeType: [] as string[],
     checkbox: [] as string[],
     verified: [] as string[],
   });
 
   const [openSections, setOpenSections] = useState({
+    categoryProd: true,
     location: true,
-    make: false,
-    year: false,
-    transmission: false,
-    condition: false,
+    brand: false,
     exchangeType: false,
     checkbox: false,
   });
 
   const [searchTerms, setSearchTerms] = useState({
+    categoryProd: "",
     location: "",
-    make: "",
-    year: "",
-    transmission: "",
-    condition: "",
+    brand: "",
     exchangeType: "",
     checkbox: "",
   });
@@ -65,21 +59,17 @@ export default function OffersWithFilters() {
 
   const clearAllFilters = () => {
     setFilters({
+      categoryProd: [],
       location: [],
-      make: [],
-      year: [],
-      transmission: [],
-      condition: [],
+      brand: [],
       exchangeType: [],
       checkbox: [],
       verified: [],
     });
     setSearchTerms({
+      categoryProd: "",
       location: "",
-      make: "",
-      year: "",
-      transmission: "",
-      condition: "",
+      brand: "",
       exchangeType: "",
       checkbox: "",
     });
@@ -94,15 +84,15 @@ export default function OffersWithFilters() {
   };
 
   const filteredOffers = offers.filter((offer) => {
+    const matchesCategoryProd =
+      filters.categoryProd.length === 0 || filters.categoryProd.includes(offer.categoryProd);
     const matchesLocation =
       filters.location.length === 0 || filters.location.includes(offer.location);
-    const matchesMake =
-      filters.make.length === 0 || filters.make.includes(offer.make);
-    const matchesYear =
-      filters.year.length === 0 || filters.year.includes(offer.year);
-    const matchesTransmission =
-      filters.transmission.length === 0 ||
-      filters.transmission.includes(offer.transmission);
+    const matchesBrand =
+      filters.brand.length === 0 || filters.brand.includes(offer.brand);
+    const matchesExchangeType =
+      filters.exchangeType.length === 0 ||
+      filters.exchangeType.includes(offer.exchangeType);
     const matchesVerified =
       filters.verified.length === 0 ||
       (filters.verified.includes("verified") && offer.verified);
@@ -112,39 +102,37 @@ export default function OffersWithFilters() {
       offer.title.toLowerCase().includes(globalSearch.toLowerCase());
 
     return (
+      matchesCategoryProd &&
       matchesLocation &&
-      matchesMake &&
-      matchesYear &&
-      matchesTransmission &&
+      matchesBrand &&
+      matchesExchangeType &&
       matchesVerified &&
       matchesGlobalSearch
     );
   });
 
   const filterOptions = {
+    categoryProd: ["Electronics", "Clothing", "Furniture", "Sports", "Other"],
     location: [
       "California", "Texas", "Florida", "New York", "Illinois", "Pennsylvania",
       "Ohio", "Georgia", "North Carolina", "Michigan", "Arizona", "Washington",
       "New Jersey", "Virginia", "Colorado", "Massachusetts", "Indiana",
       "Tennessee", "Missouri", "Nevada",
     ],
-    make: ["Mazda", "Volkswagen", "Lexus", "Linkoln", "Ford", "Chevrolet", "Dodge", "Tesla"],
-    year: ["2020", "2019", "2018"],
-    transmission: ["Automatic", "Manual"],
-    condition: ["New", "Used"],
+    brand: ["Apple", "Samsung", "Sony", "HP", "Dell"],
     exchangeType: ["Trade-in", "Cash"],
     checkbox: ["Verified Listings Only"],
   };
 
   // Получаем все активные фильтры
   const getActiveFilters = () => {
-    const active: { category: string; value: string; key: keyof typeof filters }[] = [];
+    const active: { categoryProd: string; value: string; key: keyof typeof filters }[] = [];
     
     Object.entries(filters).forEach(([key, values]) => {
       if (Array.isArray(values) && values.length > 0) {
         values.forEach((value) => {
           active.push({
-            category: key.charAt(0).toUpperCase() + key.slice(1),
+            categoryProd: key.charAt(0).toUpperCase() + key.slice(1),
             value,
             key: key as keyof typeof filters
           });
@@ -209,7 +197,7 @@ export default function OffersWithFilters() {
 
           {/* Секции фильтров */}
           {(
-            ["location", "make", "year", "transmission", "condition", "exchangeType", "checkbox"] as const
+            ["categoryProd", "location", "brand", "exchangeType", "checkbox"] as const
           ).map((section) => (
             <div key={section} className="text-[20px] pb-3">
               <button
@@ -301,7 +289,7 @@ export default function OffersWithFilters() {
           if (!Array.isArray(filterValues) || filterValues.length === 0)
             return null;
 
-          const categoryName =
+          const categoryProdName =
             filterKey === "checkbox"
               ? "Options"
               : filterKey.charAt(0).toUpperCase() + filterKey.slice(1);
@@ -310,7 +298,7 @@ export default function OffersWithFilters() {
             <div key={filterKey} className="flex flex-col min-w-[150px]">
               {/* Название категории */}
               <span className="font-medium text-[18px] text-[#181818] mb-2">
-                {categoryName}:
+                {categoryProdName}:
               </span>
 
               {/* Список значений */}
@@ -370,7 +358,7 @@ export default function OffersWithFilters() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                     <div className="relative p-4 text-white z-10 pb-[30px] pl-[20px]">
-                      <p className="text-[16px] font-thin opacity-90">{offer.category}</p>
+                      <p className="text-[16px] font-thin opacity-90">{offer.categoryProd}</p>
                       <h3 className="text-[26px] font-medium mb-1">{offer.title}</h3>
                       <p className="text-[16px] mb-3 opacity-90">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

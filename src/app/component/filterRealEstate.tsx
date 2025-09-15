@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { fetchOffers, Offer } from "./offersData";
+import { fetchOffers, Offer } from "./offerReal";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,10 +12,10 @@ export default function OffersWithFilters() {
 
   const [filters, setFilters] = useState({
     location: [] as string[],
-    make: [] as string[],
+    size: [] as string[],
     year: [] as string[],
-    transmission: [] as string[],
-    condition: [] as string[],
+    numberOfBedrooms: [] as string[],
+    numberOfBathrooms: [] as string[],
     exchangeType: [] as string[],
     checkbox: [] as string[],
     verified: [] as string[],
@@ -23,20 +23,20 @@ export default function OffersWithFilters() {
 
   const [openSections, setOpenSections] = useState({
     location: true,
-    make: false,
+    size: false,
     year: false,
-    transmission: false,
-    condition: false,
+    numberOfBedrooms: false,
+    numberOfBathrooms: false,
     exchangeType: false,
     checkbox: false,
   });
 
   const [searchTerms, setSearchTerms] = useState({
     location: "",
-    make: "",
+    size: "",
     year: "",
-    transmission: "",
-    condition: "",
+    numberOfBedrooms: "",
+    numberOfBathrooms: "",
     exchangeType: "",
     checkbox: "",
   });
@@ -66,20 +66,20 @@ export default function OffersWithFilters() {
   const clearAllFilters = () => {
     setFilters({
       location: [],
-      make: [],
+      size: [],
       year: [],
-      transmission: [],
-      condition: [],
+      numberOfBedrooms: [],
+      numberOfBathrooms: [],
       exchangeType: [],
       checkbox: [],
       verified: [],
     });
     setSearchTerms({
       location: "",
-      make: "",
+      size: "",
       year: "",
-      transmission: "",
-      condition: "",
+      numberOfBedrooms: "",
+      numberOfBathrooms: "",
       exchangeType: "",
       checkbox: "",
     });
@@ -97,12 +97,12 @@ export default function OffersWithFilters() {
     const matchesLocation =
       filters.location.length === 0 || filters.location.includes(offer.location);
     const matchesMake =
-      filters.make.length === 0 || filters.make.includes(offer.make);
+      filters.size.length === 0 || filters.size.includes(offer.size);
     const matchesYear =
       filters.year.length === 0 || filters.year.includes(offer.year);
     const matchesTransmission =
-      filters.transmission.length === 0 ||
-      filters.transmission.includes(offer.transmission);
+      filters.numberOfBedrooms.length === 0 ||
+      filters.numberOfBathrooms.includes(offer.numberOfBathrooms);
     const matchesVerified =
       filters.verified.length === 0 ||
       (filters.verified.includes("verified") && offer.verified);
@@ -128,10 +128,10 @@ export default function OffersWithFilters() {
       "New Jersey", "Virginia", "Colorado", "Massachusetts", "Indiana",
       "Tennessee", "Missouri", "Nevada",
     ],
-    make: ["Mazda", "Volkswagen", "Lexus", "Linkoln", "Ford", "Chevrolet", "Dodge", "Tesla"],
-    year: ["2020", "2019", "2018"],
-    transmission: ["Automatic", "Manual"],
-    condition: ["New", "Used"],
+    size: ["20-30 m2", "30-40 m2", "40-50 m2", "50-60 m2", "60-70 m2", "70-80 m2", "80-90 m2", "100+ m2"],
+    year: ["< 2000 ", "2000-2010", "2010-2020", "> 2020 "],
+    numberOfBedrooms: ["1-2", "2-3", "3-4", "4+"],
+    numberOfBathrooms: ["1-2", "2-3"],
     exchangeType: ["Trade-in", "Cash"],
     checkbox: ["Verified Listings Only"],
   };
@@ -168,8 +168,8 @@ export default function OffersWithFilters() {
     Home
   </Link>
   <span className="text-[40px] font-light pb-[7px]">›</span>
-  <Link href="/cars" className="font-bold text-[20px] hover:text-[#2d4e30] transition-colors duration-500 ease-in-out">
-    Cars
+  <Link href="/real-estate" className="font-bold text-[20px] hover:text-[#2d4e30] transition-colors duration-500 ease-in-out">
+    Real Estate
   </Link>
 </div>
           
@@ -209,7 +209,7 @@ export default function OffersWithFilters() {
 
           {/* Секции фильтров */}
           {(
-            ["location", "make", "year", "transmission", "condition", "exchangeType", "checkbox"] as const
+            ["location", "size", "year", "numberOfBedrooms", "numberOfBathrooms", "exchangeType", "checkbox"] as const
           ).map((section) => (
             <div key={section} className="text-[20px] pb-3">
               <button
