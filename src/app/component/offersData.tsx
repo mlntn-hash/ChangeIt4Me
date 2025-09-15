@@ -22,7 +22,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/vw.jpg",
+    image: "./car3.webp",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const mockOffers: Offer[] = [
     year: "2020",
     transmission: "Manual",
     verified: false,
-    image: "/cars/mazda2.jpg",
+    image: "./car2.webp",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/mazda1.jpg",
+    image: "./car1.webp",
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/vw.jpg",
+    image: "./car3.webp",
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const mockOffers: Offer[] = [
     year: "2020",
     transmission: "Manual",
     verified: false,
-    image: "/cars/mazda2.jpg",
+    image: "./car2.webp",
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/mazda1.jpg",
+    image: "./car1.webp",
   },
   {
     id: 7,
@@ -88,7 +88,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/vw.jpg",
+    image: "./car3.webp",
   },
   {
     id: 8,
@@ -99,7 +99,7 @@ const mockOffers: Offer[] = [
     year: "2020",
     transmission: "Manual",
     verified: false,
-    image: "/cars/mazda2.jpg",
+    image: "./car2.webp",
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/mazda1.jpg",
+    image: "./car1.webp",
   },
   {
     id: 10,
@@ -121,7 +121,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/vw.jpg",
+    image: "./car3.webp",
   },
   {
     id: 11,
@@ -132,7 +132,7 @@ const mockOffers: Offer[] = [
     year: "2020",
     transmission: "Manual",
     verified: false,
-    image: "/cars/mazda2.jpg",
+    image: "./car2.webp",
   },
   {
     id: 12,
@@ -143,7 +143,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/mazda1.jpg",
+    image: "./car1.webp",
   },
   {
     id: 13,
@@ -154,7 +154,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/vw.jpg",
+    image: "./car3.webp",
   },
   {
     id: 14,
@@ -165,7 +165,7 @@ const mockOffers: Offer[] = [
     year: "2020",
     transmission: "Manual",
     verified: false,
-    image: "/cars/mazda2.jpg",
+    image: "./car2.webp",
   },
   {
     id: 15,
@@ -176,7 +176,7 @@ const mockOffers: Offer[] = [
     year: "2019",
     transmission: "Automatic",
     verified: true,
-    image: "/cars/mazda1.jpg",
+    image: "./car1.webp",
   },
 ];
 

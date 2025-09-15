@@ -4,15 +4,12 @@ import Category from "../homePage/category";
 import Newsletter from "../homePage/email";
 import FilterSections from "../component/filterCars"
 
-
 export default function category() {
   return (
      <div className="relative  flex flex-col  ">
            <Header />
            <Category />
-            <FilterSections/>
-           
-
+           <FilterSections/>
            <Newsletter/>
             <Footer />
 
