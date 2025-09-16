@@ -11,7 +11,7 @@ export default function OffersWithFilters() {
   const [loading, setLoading] = useState(true);
 
   const [filters, setFilters] = useState({
-    categoryProd: [] as string[],
+    category: [] as string[],
     location: [] as string[],
     brand: [] as string[],
     exchangeType: [] as string[],
@@ -20,7 +20,7 @@ export default function OffersWithFilters() {
   });
 
   const [openSections, setOpenSections] = useState({
-    categoryProd: true,
+    category: true,
     location: true,
     brand: false,
     exchangeType: false,
@@ -28,7 +28,7 @@ export default function OffersWithFilters() {
   });
 
   const [searchTerms, setSearchTerms] = useState({
-    categoryProd: "",
+    category: "",
     location: "",
     brand: "",
     exchangeType: "",
@@ -59,7 +59,7 @@ export default function OffersWithFilters() {
 
   const clearAllFilters = () => {
     setFilters({
-      categoryProd: [],
+      category: [],
       location: [],
       brand: [],
       exchangeType: [],
@@ -67,7 +67,7 @@ export default function OffersWithFilters() {
       verified: [],
     });
     setSearchTerms({
-      categoryProd: "",
+      category: "",
       location: "",
       brand: "",
       exchangeType: "",
@@ -84,8 +84,8 @@ export default function OffersWithFilters() {
   };
 
   const filteredOffers = offers.filter((offer) => {
-    const matchesCategoryProd =
-      filters.categoryProd.length === 0 || filters.categoryProd.includes(offer.categoryProd);
+    const matchesCategory =
+      filters.category.length === 0 || filters.category.includes(offer.category);
     const matchesLocation =
       filters.location.length === 0 || filters.location.includes(offer.location);
     const matchesBrand =
@@ -102,7 +102,7 @@ export default function OffersWithFilters() {
       offer.title.toLowerCase().includes(globalSearch.toLowerCase());
 
     return (
-      matchesCategoryProd &&
+      matchesCategory &&
       matchesLocation &&
       matchesBrand &&
       matchesExchangeType &&
@@ -112,7 +112,7 @@ export default function OffersWithFilters() {
   });
 
   const filterOptions = {
-    categoryProd: ["Electronics", "Clothing", "Furniture", "Sports", "Other"],
+    category: ["Electronics", "Clothing", "Furniture", "Sports", "Other"],
     location: [
       "California", "Texas", "Florida", "New York", "Illinois", "Pennsylvania",
       "Ohio", "Georgia", "North Carolina", "Michigan", "Arizona", "Washington",
@@ -126,13 +126,13 @@ export default function OffersWithFilters() {
 
   // Получаем все активные фильтры
   const getActiveFilters = () => {
-    const active: { categoryProd: string; value: string; key: keyof typeof filters }[] = [];
+    const active: { category: string; value: string; key: keyof typeof filters }[] = [];
     
     Object.entries(filters).forEach(([key, values]) => {
       if (Array.isArray(values) && values.length > 0) {
         values.forEach((value) => {
           active.push({
-            categoryProd: key.charAt(0).toUpperCase() + key.slice(1),
+            category: key.charAt(0).toUpperCase() + key.slice(1),
             value,
             key: key as keyof typeof filters
           });
@@ -156,8 +156,8 @@ export default function OffersWithFilters() {
     Home
   </Link>
   <span className="text-[40px] font-light pb-[7px]">›</span>
-  <Link href="/cars" className="font-bold text-[20px] hover:text-[#2d4e30] transition-colors duration-500 ease-in-out">
-    Cars
+  <Link href="/marketplace" className="font-bold text-[20px] hover:text-[#2d4e30] transition-colors duration-500 ease-in-out">
+    Marketplace
   </Link>
 </div>
           
@@ -197,7 +197,7 @@ export default function OffersWithFilters() {
 
           {/* Секции фильтров */}
           {(
-            ["categoryProd", "location", "brand", "exchangeType", "checkbox"] as const
+            ["category", "location", "brand", "exchangeType", "checkbox"] as const
           ).map((section) => (
             <div key={section} className="text-[20px] pb-3">
               <button
@@ -289,7 +289,7 @@ export default function OffersWithFilters() {
           if (!Array.isArray(filterValues) || filterValues.length === 0)
             return null;
 
-          const categoryProdName =
+          const categoryName =
             filterKey === "checkbox"
               ? "Options"
               : filterKey.charAt(0).toUpperCase() + filterKey.slice(1);
@@ -298,7 +298,7 @@ export default function OffersWithFilters() {
             <div key={filterKey} className="flex flex-col min-w-[150px]">
               {/* Название категории */}
               <span className="font-medium text-[18px] text-[#181818] mb-2">
-                {categoryProdName}:
+                {categoryName}:
               </span>
 
               {/* Список значений */}
