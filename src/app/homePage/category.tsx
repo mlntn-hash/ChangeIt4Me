@@ -9,17 +9,17 @@ export default function Category() {
     {
       href: "/cars",
       label: "Cars (998 items)",
-      icon: "/Group 12 (2).svg",
+      icon: "/cat1.svg",
     },
     {
       href: "/real-estate",
       label: "Real Estate (990 items)",
-      icon: "/Group 12 (1).svg",
+      icon: "/cat2.svg",
     },
     {
       href: "/marketplace",
       label: "Marketplace (1220 items)",
-      icon: "/Group 12.svg",
+      icon: "/cat3.svg",
     },
   ];
 

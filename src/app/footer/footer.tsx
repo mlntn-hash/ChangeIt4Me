@@ -156,7 +156,7 @@ const Footer = () => {
                 {/* Кнопка подписки */}
                 <button
                   onClick={handleSubscribe}
-                  className="mt-[10px] w-[244px] text-[17px] shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-[#376039] hover:bg-[#2d4e30] transition-colors duration-500 ease-in-out text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200"
+                  className="mt-[10px] w-[244px] text-[17px] shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-[#507001] hover:bg-[#2d4e30] transition-colors duration-500 ease-in-out text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200"
                 >
                   Subscribe
                 </button>

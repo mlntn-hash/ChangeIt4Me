@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { FormProvider } from './context/FormContext';
 
 
 const roboto = Roboto({
@@ -23,7 +24,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo.webp" />
       </head>
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>{children}
+        <FormProvider>
+          {children}
+        </FormProvider>
+      </body>
     </html>
   );
 }
+

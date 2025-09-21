@@ -15,7 +15,7 @@ export default function PopularOffers() {
       {/* Заголовок + кнопка */}
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-[38px] font-regular text-[#181818]">Popular Offers</h2>
-        <button className="bg-[#376039] text-white text-[17px] font-regular rounded-[6px] hover:bg-[#2d4e30] w-[166px] h-[40px] transition-colors duration-500 ease-in-out">
+        <button className="bg-[#507001] text-white text-[17px] font-regular rounded-[6px] hover:bg-[#2d4e30] w-[166px] h-[40px] transition-colors duration-500 ease-in-out">
           See all items →
         </button>
       </div>

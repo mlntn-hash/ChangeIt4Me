@@ -34,7 +34,7 @@ export default function HowItWorks() {
               className="relative flex flex-col items-center text-center gap-8"
             >
               {/* Кружок с номером */}
-              <div className="w-[80px] h-[80px] bg-[#669B6C] rounded-full text-white flex items-center justify-center text-[32px] font-regular">
+              <div className="w-[80px] h-[80px] bg-[#92C11D] rounded-full text-white flex items-center justify-center text-[32px] font-regular">
                 {step.number}
               </div>
 
