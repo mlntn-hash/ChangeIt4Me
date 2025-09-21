@@ -1,17 +1,93 @@
+import Image from "next/image";
+
+
 export default function RealEstateForm() {
   return (
-    <div className="space-y-4">
-      <div>
-        <label className="block font-medium">Make</label>
-        <input type="text" placeholder="house" className="border rounded w-full p-2" />
+    <div>
+      {/* Заголовок */}
+      <div className="flex items-center gap-3 mb-6">
+        <Image src="/add4.svg" alt="Step 1" width={41} height={41} />
+        <p className="font-medium text-[38px]">Item Details</p>
       </div>
-      <div>
-        <label className="block font-medium">Model</label>
-        <input type="text" className="border rounded w-full p-2" />
-      </div>
-      <div>
-        <label className="block font-medium">Year</label>
-        <input type="number" className="border rounded w-full p-2" />
+
+      {/* Форма у 2 колонки */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Left column */}
+       <div className="flex flex-col">
+  <label className="mb-2 text-[#181818] text-[20px] font-medium">
+    Type
+  </label>
+  <div className="relative">
+    <Image
+      src="/search.svg"
+      alt="search"
+      width={20}
+      height={20}
+      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+    />
+    <input
+      type="text"
+      placeholder="Enter"
+      className="w-[540px] h-[45px] bg-[#FFFFFF] text-[20px] shadow-[0_0_10px_rgba(0,0,0,0.15)] pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:border-[#507001]"
+    />
+  </div>
+</div>
+
+
+
+        <div className="flex flex-col ml-[40px]">
+          <label className="mb-2 text-[#181818] text-[20px] font-medium">Bathrooms</label>
+        <div className="relative">
+    <Image
+      src="/search.svg"
+      alt="search"
+      width={20}
+      height={20}
+      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+    />
+    <input
+      type="text"
+      placeholder="Enter"
+      className="w-[540px] h-[45px] bg-[#FFFFFF] text-[20px] shadow-[0_0_10px_rgba(0,0,0,0.15)] pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:border-[#507001]"
+    />
+  </div>
+        </div>
+
+        <div className="flex flex-col">
+          <label className="mb-2 text-[#181818] text-[20px] font-medium">Size</label>
+          <input
+            type="text"
+            placeholder="Enter"
+            className="w-[540px] h-[45px] bg-[#FFFFFF] text-[20px] shadow-[0_0_10px_rgba(0,0,0,0.15)] px-4 py-3 rounded-lg focus:outline-none focus:border-[#507001]"
+          />
+        </div>
+
+        <div className="flex flex-col ml-[40px]">
+          <label className="mb-2 text-[#181818] text-[20px] font-medium">Condition</label>
+          <input
+            type="text"
+            placeholder="Enter"
+            className="w-[540px] h-[45px] px-4 py-3 text-[20px] bg-[#FFFFFF] shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-lg focus:outline-none focus:border-[#507001]"
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <label className="mb-2 text-[#181818] text-[20px] font-medium">Bedrooms</label>
+          <div className="relative">
+    <Image
+      src="/search.svg"
+      alt="search"
+      width={20}
+      height={20}
+      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+    />
+    <input
+      type="text"
+      placeholder="Enter"
+      className="w-[540px] h-[45px] bg-[#FFFFFF] text-[20px] shadow-[0_0_10px_rgba(0,0,0,0.15)] pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:border-[#507001]"
+    />
+  </div>
+        </div>
       </div>
     </div>
   );
