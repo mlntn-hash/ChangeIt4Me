@@ -25,7 +25,7 @@ export default function Newsletter() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-[8px] w-[355px] h-[41px] focus:outline-none shadow-[0_0_10px_rgba(0,0,0,0.15)]"
             />
-            <button className="bg-[#376039] w-[355px] h-[41px] text-white rounded-[8px] hover:bg-[#2e5030] transition-colors duration-500 ease-in-out">
+            <button className="bg-[#507001] w-[355px] h-[41px] text-white rounded-[8px] hover:bg-[#2e5030] transition-colors duration-500 ease-in-out">
               Subscribe
             </button>
           </div>

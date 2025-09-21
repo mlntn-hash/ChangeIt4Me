@@ -43,7 +43,7 @@ export default function homePage() {
         <p className="font-regular text-[24px] text-[#181818] mb-6">
           Cars, real estate & goods key-for-key.
         </p>
-        <button className="bg-[#376039] text-[17px] font-regular text-white px-6 py-3 rounded-[8px] w-[196px] h-[50px] hover:bg-[#2d4e30] transition-colors duration-500 ease-in-out">
+        <button className="bg-[#507001] text-[17px] font-regular text-white px-6 py-3 rounded-[8px] w-[196px] h-[50px] hover:bg-[#2d4e30] transition-colors duration-500 ease-in-out">
           Post Your Offer
         </button>
       </div>
@@ -69,7 +69,7 @@ export default function homePage() {
         </Link>
         <div className="absolute bottom-[-30px] right-[-30px]">
          <img
-            src="/house.webp"
+            src="/house1.png"
             alt="Marketplace Icon"
             className="w-[132px] h-[132px]"
           />
@@ -98,7 +98,7 @@ export default function homePage() {
           </Link>
          <div className="absolute bottom-[-30px] right-[-30px]">
          <img
-            src="/2cars.webp"
+            src="/carr.png"
             alt="Marketplace Icon"
             className="w-[132px] h-[132px]"
           />
@@ -123,7 +123,7 @@ export default function homePage() {
           </Link>
           <div className="absolute bottom-[-30px] right-[-30px]">
          <img
-            src="/shop.webp"
+            src="/shop1.png"
             alt="Marketplace Icon"
             className="w-[132px] h-[132px]"
           />

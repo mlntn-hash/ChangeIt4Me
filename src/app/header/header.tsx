@@ -12,9 +12,9 @@ const Header = () => {
         <div className="flex items-start">
           <Link href="/">
     <img 
-      src="/logo.webp" 
+      src="/logo2.png" 
       alt="ChangeIt4Me" 
-      className="h-[67px] w-[137px] cursor-pointer" 
+      className="h-[64px] w-[193px] cursor-pointer" 
          />
       </Link>
         </div>
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
 
           {/* --- Кнопка "Подать объявление" --- */}
-          <button className="bg-[#376039] h-[41px] w-[161px] hover:bg-[#2d4e30] 
+          <button className="bg-[#507001] h-[41px] w-[161px] hover:bg-[#2d4e30] 
                              text-white rounded-lg text-[17px] font-medium transition-colors duration-500 ease-in-out">
             Post an Ad
           </button>

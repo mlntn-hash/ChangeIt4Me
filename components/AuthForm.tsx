@@ -80,7 +80,7 @@ export default function AuthForm({
         <div className="flex items-center justify-center gap-4 pt-[20px]">
           <button
             type="submit"
-            className="rounded-md text-[17px] bg-[#376039] px-6 w-[166px] h-[41px] text-white hover:bg-[#376039] transition"
+            className="rounded-md text-[17px] bg-[#507001] px-6 w-[166px] h-[41px] text-white hover:bg-[#376039] transition"
           >
             {submitText}
           </button>
@@ -145,7 +145,7 @@ export default function AuthForm({
           )}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-between gap-3">
+        {/*<div className="flex flex-col sm:flex-row justify-between gap-3">
           <button
             type="button"
             className="flex shadow-[0_0_10px_rgba(0,0,0,0.15)] items-center justify-center space-x-2 rounded-md border border-gray-300 bg-white h-[41px] w-[243px] text-gray-700 hover:bg-gray-50 transition"
@@ -160,7 +160,7 @@ export default function AuthForm({
             <span>{goodleApple}</span>
             <FaApple size={30} />
           </button>
-        </div>
+        </div>*/}
       </form>
     </div>
   );

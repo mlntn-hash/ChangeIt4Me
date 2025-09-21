@@ -10,9 +10,9 @@ export default function RegisterPage() {
         <div className="absolute top-6 left-6 z-50">
       <Link href="/">
     <img 
-      src="/logo.webp" 
+      src="/logo2.png" 
       alt="ChangeIt4Me" 
-      className="h-[67px] w-[137px] cursor-pointer" 
+      className="h-[64px] w-[193px] cursor-pointer" 
          />
       </Link>
        </div>

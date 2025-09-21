@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+
 const steps = [
   "Add photos",
   "Category Selection",
@@ -356,20 +357,21 @@ export default function MultiStepForm() {
 
             {/* Условие для кнопки */}
             {step < steps.length - 1 ? (
-              <button
-                onClick={nextStep}
-                className="px-4 py-2 bg-[#507001] h-[45px] w-[166px] text-white text-[20px] rounded-md ml-[20px]"
-              >
-                Next →
-              </button>
-            ) : (
-              <button
-                onClick={() => router.push("/preview")}
-                className="px-4 py-2 bg-[#507001] h-[45px] w-[206px] text-white text-[20px] rounded-md ml-[20px]"
-              >
-                Show Preview →
-              </button>
-            )}
+  <button
+    onClick={nextStep}
+    className="px-4 py-2 bg-[#507001] h-[45px] w-[166px] text-white hover:bg-[#2d4e30] text-[20px] transition-colors duration-500 ease-in-out rounded-md ml-[20px]"
+  >
+    Next →
+  </button>
+) : (
+  <button
+    onClick={() => router.push(`/preview?category=${category}`)}   // ✅ передаём категорию в query
+    className="px-4 py-2 bg-[#507001] h-[45px] w-[206px] text-white hover:bg-[#2d4e30] transition-colors duration-500 ease-in-out text-[20px] rounded-md ml-[20px]"
+  >
+    Show Preview →
+  </button>
+)}
+
           </div>
         </div>
       </div>
