@@ -261,7 +261,7 @@ export default function MultiStepForm() {
                 {/* City */}
                 <div className="flex flex-col">
                   <label className="mb-2 text-[#181818] text-[20px] font-medium">
-                    City
+                    Location
                   </label>
                   <div className="relative">
                     <Image
