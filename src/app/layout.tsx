@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto} antialiased`}>
       <head>
-        <link rel="icon" href="/logo.webp" />
+        <link rel="icon" href="/logo3.png" />
       </head>
       <body className={roboto.className}>{children}
         

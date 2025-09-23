@@ -39,9 +39,9 @@ export default function HelpCenter() {
     <div className="bg-white">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-[45px] font-medium mb-4 border-b border-gray-300 pb-2 pt-[10px]">
+        <h1 className="text-[45px] font-medium mb-4 border-b border-gray-300 pb-2 pt-[10px] ">
             Help Center
-          </h1>
+        </h1>
         <p className="text-[20px] text-[#666666] font-light italic">Get support and answers.</p>
       </div>
 
@@ -51,10 +51,10 @@ export default function HelpCenter() {
         
         <div className="space-y-2">
           {faqItems.map((item, index) => (
-            <div key={index} className=" shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-[10px] overflow-hidden">
+            <div key={index} className="shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-[10px] overflow-hidden">
               <button
                 onClick={() => toggleFaq(index)}
-                className="w-full  px-4 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300"
+                className="w-full px-4 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300"
               >
                 <span className="text-[20px] font-regular text-[#181818]">
                   {item.question}
@@ -65,14 +65,17 @@ export default function HelpCenter() {
                   <ChevronDown className="w-5 h-5 text-[#666666]" />
                 )}
               </button>
-              
-              {openFaq === index && (
-                <div className="px-4 pb-4 ">
-                  <p className="text-[20px] text-[#181818] leading-relaxed pt-3">
-                    {item.answer}
-                  </p>
-                </div>
-              )}
+
+              {/* Плавное раскрытие */}
+              <div
+                className={`px-4 overflow-hidden transition-all duration-500 ease-in-out ${
+                  openFaq === index ? 'max-h-96 pb-4' : 'max-h-0'
+                }`}
+              >
+                <p className="text-[20px] text-[#181818] leading-relaxed pt-3">
+                  {item.answer}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -81,7 +84,7 @@ export default function HelpCenter() {
       {/* Contact Support Section */}
       <div>
         <h3 className="text-[38px] font-regular text-[#181818] mb-4">Contact Support</h3>
-        <p className=" text-[#181818] text-[20px] leading-relaxed">
+        <p className="text-[#181818] text-[20px] leading-relaxed">
           If you didn't find the answer to your question, please contact us at{' '}
           <a 
             href="mailto:support@example.com" 
