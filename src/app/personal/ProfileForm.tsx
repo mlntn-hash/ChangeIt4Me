@@ -1,17 +1,50 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 
 export default function ProfileForm() {
+  const [imageSrc, setImageSrc] = useState("/avatar.png");
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        if (reader.result) {
+          setImageSrc(reader.result as string);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
-    <div className="flex-1 bg-white  rounded-lg p-4">
-      <h1 className="text-[45px] font-medium mb-2 border-b border-gray-300">Personal Information</h1>
-      <p className="text-[#181818] text-[20px] font-thin italic pt-[30px] mb-8">Manage your profile details:</p>
+    <div className="flex-1 bg-white rounded-lg">
+      <h1 className="text-[45px] font-medium mb-1 border-b border-gray-300 pb-2 pt-[10px]">
+        Personal Information
+      </h1>
+      <p className="text-[#181818] text-[20px] font-thin italic pt-[30px] mb-8">
+        Manage your profile details:
+      </p>
 
       <form className="space-y-6">
         {/* Profile photo */}
         <div>
-          <label className="block mb-2 text-[20px] font-medium">1. Profile Photo</label>  
-            <Image src="/avatar.png" alt="User" width={150} height={150} />  
+          <label className="block mb-2 text-[20px] font-medium">1. Profile Photo</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            id="profilePhotoInput"
+            className="hidden"
+          />
+          <div
+            onClick={() => document.getElementById("profilePhotoInput")?.click()}
+            className="cursor-pointer w-[150px] h-[150px] rounded-full overflow-hidden border-2 border-gray-300"
+          >
+            <Image src={imageSrc} alt="User" width={150} height={150} className="object-cover" />
+          </div>
         </div>
 
         {/* Full name */}

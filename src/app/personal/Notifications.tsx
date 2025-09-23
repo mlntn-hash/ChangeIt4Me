@@ -16,8 +16,8 @@ const notifications: Notification[] = [
 
 export default function Notifications() {
   return (
-    <div className="bg-white rounded-lg p-6">
-      <h1 className="text-[36px] font-medium mb-4 border-b border-gray-300 pb-2">
+    <div className="bg-white rounded-lg">
+      <h1 className="text-[45px] font-medium mb-4 border-b border-gray-300 pb-2 pt-[10px]">
         Notifications
       </h1>
 

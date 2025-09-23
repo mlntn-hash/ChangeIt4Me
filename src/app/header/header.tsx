@@ -35,10 +35,14 @@ const Header = () => {
           </div>
 
           {/* --- Кнопка "Подать объявление" --- */}
-          <button className="bg-[#507001] h-[41px] w-[161px] hover:bg-[#2d4e30] 
-                             text-white rounded-lg text-[17px] font-medium transition-colors duration-500 ease-in-out">
-            Post an Ad
-          </button>
+          <Link href="/add-post">
+  
+    <button className="bg-[#507001] h-[41px] w-[161px] hover:bg-[#2d4e30] 
+                       text-white rounded-lg  cursor-pointer text-[17px] font-medium transition-colors duration-500 ease-in-out">
+      Post an Ad
+    </button>
+  
+</Link>
 
           {/* --- Кнопка "Войти/Регистрация" --- */}
          <div className="flex items-center text-[17px] font-medium text-[#181818]">

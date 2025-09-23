@@ -25,9 +25,7 @@ export default function RootLayout({
         <link rel="icon" href="/logo.webp" />
       </head>
       <body className={roboto.className}>{children}
-        <FormProvider>
-          {children}
-        </FormProvider>
+        
       </body>
     </html>
   );
