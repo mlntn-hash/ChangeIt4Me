@@ -16,8 +16,8 @@ const notifications: Notification[] = [
 
 export default function Notifications() {
   return (
-    <div className="bg-white rounded-lg p-6">
-      <h1 className="text-[36px] font-medium mb-4 border-b border-gray-300 pb-2">
+    <div className="bg-white rounded-lg">
+      <h1 className="text-[45px] font-medium mb-4 border-b border-gray-300 pb-2 pt-[10px]">
         Notifications
       </h1>
 
@@ -25,11 +25,11 @@ export default function Notifications() {
         {notifications.map((n) => (
           <div
             key={n.id}
-            className="flex items-center justify-between py-4"
+            className="flex items-center justify-between py-4 cursor-pointed hover:bg-gray-100 rounded-lg transition-colors duration-300"
           >
             <div>
-              <p className="font-medium text-[18px]">{n.title}</p>
-              <p className="text-[#181818] font-thin text-[15px]">{n.text}</p>
+              <p className="font-medium text-[18px] px-[10px]">{n.title}</p>
+              <p className="text-[#181818] font-thin text-[15px] px-[10px]">{n.text}</p>
             </div>
             {n.unread && (
               <span className="w-3 h-3 bg-orange-500 rounded-full"></span>

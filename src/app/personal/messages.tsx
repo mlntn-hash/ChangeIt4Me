@@ -51,7 +51,7 @@ export default function ChatApp() {
     <div className="flex-1 bg-white rounded-lg">
       {!selectedUser ? (
         <>
-          <h1 className="text-[45px] font-medium mb-4 border-b border-gray-300 pb-2 px-6">
+          <h1 className="text-[45px] font-medium mb-4 border-b border-gray-300 pb-2 pt-[10px]">
             Messages
           </h1>
 

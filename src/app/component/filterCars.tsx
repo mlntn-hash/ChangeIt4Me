@@ -279,7 +279,7 @@ export default function OffersWithFilters() {
           ))}
 
           {/* Кнопка поиска */}
-          <button className="py-[5px] px-[10px] w-[186px] text-[20px] h-[50px] bg-[#376039] text-white rounded-lg hover:bg-[#2e5030] transition-colors duration-500 ease-in-out font-medium">
+          <button className="py-[5px] px-[10px] w-[186px] text-[20px] h-[50px] bg-[#507001] text-white rounded-lg hover:bg-[#2e5030] transition-colors duration-500 ease-in-out font-medium">
             Search 
           </button>
         </aside>
