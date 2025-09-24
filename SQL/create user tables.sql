@@ -22,7 +22,7 @@ CREATE TABLE "c4m_Users" (
     "provider_user_id" TEXT NULL,
 
 	-- Account status
-    "is_active" BOOLEAN DEFAULT TRUE, 
+    "active_status" TEXT NOT NULL CHECK ("active_status" IN ('unconfirmed', 'active', 'banned', 'deleted')) DEFAULT 'unconfirmed', 
 	"created_time" TIMESTAMP DEFAULT NOW(), -- When account created
 
 
@@ -47,7 +47,7 @@ CREATE TABLE "c4m_User_Bios" (
 	"phone" TEXT NULL,
 
 	CHECK (char_length("name") >= 3 AND char_length("name") <= 100), -- Name is between 3 and 100 characters. 
-	CHECK (char_length("phone") <= 12), -- Store without spaces and special characters.
+	CHECK (char_length("phone") <= 15), -- Store without spaces and special characters.
 	CHECK (char_length("short_bio") <= 100)
 );
 
