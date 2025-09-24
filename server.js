@@ -19,7 +19,7 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(PORT, () => {
-    console.log(`Сервер был запущен на http://localhost:${PORT}`);
-  });
+  server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Сервер был запущен на http://0.0.0.0:${PORT}`);
+});
 });
